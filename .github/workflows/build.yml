@@ -206,7 +206,7 @@ jobs:
 
       - name: Install host Qt (Windows MSVC arm64)
         if: runner.os == 'Windows' && matrix.architecture == 'arm64'
-        uses: jurplel/install-qt-action@v3.1.0
+        uses: jurplel/install-qt-action@v3.2.0
         with:
            aqtversion: '==3.1.*'
            py7zrversion: '>=0.20.2'
@@ -223,9 +223,9 @@ jobs:
 
       - name: Install Qt (macOS, Linux, Qt 6 & Windows MSVC)
         if: runner.os == 'Linux' && matrix.qt_ver == 6 || runner.os == 'macOS' || (runner.os == 'Windows' && matrix.msystem == '')
-        uses: jurplel/install-qt-action@v3.1.0
+        uses: jurplel/install-qt-action@v3.2.0
         with:
-           aqtversion: '==3.1.*'
+           aqtversion: '==3.1.5'
            py7zrversion: '>=0.20.2'
            version: ${{ matrix.qt_version }}
            host: ${{ matrix.qt_host }}
